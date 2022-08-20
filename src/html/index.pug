@@ -1,0 +1,15 @@
+extends includes/_layout
+
+block title
+  title Portfolio Site 
+
+block content 
+  section.portfolio#portfolio
+    .container.portfolio-container
+      h2.portfolio__title Portfolio
+      .portfolio__projects
+        each project in projects
+          a(href= project.link).portfolio__project
+            img(src= project.image, alt= project.name).portfolio__project_image
+            h4.portfolio__project_title= project.name
+            p.portfolio__project_subtitle= project.description

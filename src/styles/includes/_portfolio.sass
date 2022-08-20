@@ -1,0 +1,28 @@
+.portfolio
+  max-width: 144rem
+  margin: 0 auto
+  &-container
+    padding: 8rem 1.5rem 11.5rem 1.5rem
+  &__title
+    margin-bottom: 7rem
+    text-align: center
+  &__projects
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 3rem
+  &__project
+    width: 54rem
+    padding: 2rem 2rem 3rem
+    background: $main-lite
+    box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35)
+    transition: .4s box-shadow
+    -webkit-transition: .4s box-shadow
+    &:hover
+      opacity: 1
+      box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.8)
+    &_image
+      margin-bottom: 2rem
+    &_title
+      margin-bottom: 1.3rem
+    &_subtitle
+      line-height: 1.3

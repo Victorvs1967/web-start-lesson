@@ -14,7 +14,7 @@ export const html = () => app.gulp.src(app.path.src.html)
     pretty: true,
     verbose: true,
   }))
-  .pipe(app.plugins.replace(/@img\//g, 'img/'))
+  .pipe(app.plugins.replace(/@img\//g, '/img/'))
   .pipe(app.plugins.if(app.isBuild, webp()))
   .pipe(app.plugins.if(app.isBuild, version({
     'value': '%DT%',

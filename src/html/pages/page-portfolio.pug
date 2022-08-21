@@ -1,0 +1,15 @@
+extends ../includes/_layout
+
+block title
+  title Portfolio Site 
+
+block content 
+  section.project-page
+    .container.project-page__container
+      h2.project-page__title "Portfolio" Web-site
+      img(src="@img/portfolio-full.png", alt="Image Portfolio").project-page__image
+      p.project-page__description Layout of a multi-page site. Main, page with services,<br>map with a feedback form, page with an article.
+      .project-page__link Address:&nbsp;&nbsp;
+        a(href="#!") site.com
+      a(href="/index.html")
+        button(type="buttom").project-page__btn ← return to home

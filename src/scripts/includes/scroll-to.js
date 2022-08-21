@@ -3,7 +3,7 @@ const SCROLL_STEP = 0.1;
 // Scroll from 'scroll-down' to 'content'
 export const scrollTo = () => {
   const scrollDownButton = document.getElementById('scroll-down'),
-    scrollToContent = document.getElementById('content');
+        scrollToContent = document.getElementById('content');
 
   let currenttScroll = window.scrollY;
   let scrollAnimationId;

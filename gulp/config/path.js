@@ -12,6 +12,7 @@ export const path = {
     html: [`${src}/html/**/*.pug`, `!${src}/html/includes/**/*.*`],
     fonts: [`${src}/fonts/**/*.ttf`, `${src}/fonts/**/*.otf`],
     images: `${src}/images/**/*.{png,jpg,jpeg,gif,webp}`,
+    videos: `${src}/videos/**/*.mp4`,
     svg: `${src}/images/**/*.svg`,
     svgicons: `${src}/icons/*.svg`,
   },
@@ -20,6 +21,7 @@ export const path = {
     styles: `${dest}/css/`,
     html: `${dest}/`,
     images: `${dest}/img/`,
+    videos: `${dest}/videos/`,
     fonts: `${dest}/fonts/`
   },
   watch: {

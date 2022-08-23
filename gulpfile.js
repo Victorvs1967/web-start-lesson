@@ -11,6 +11,7 @@ import { server } from './gulp/tasks/server.js';
 import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js';
 import { svgSprite } from './gulp/tasks/svgsprite.js';
 import { zip } from './gulp/tasks/zip.js';
+import { videos } from './gulp/tasks/videos.js';
 
 global.app = {
   isBuild: process.argv.includes('--build'),
@@ -32,8 +33,8 @@ export const watch = () => {
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
-export const dev = gulp.series(clean, fonts, svgSprite, gulp.parallel(html, images, styles, scripts), watch);
-export const build = gulp.series(clean, fonts, svgSprite, gulp.parallel(html, images, styles, scripts));
+export const dev = gulp.series(clean, fonts, videos, svgSprite, gulp.parallel(html, images, styles, scripts), watch);
+export const build = gulp.series(clean, fonts, videos, svgSprite, gulp.parallel(html, images, styles, scripts));
 export const deployZIP = gulp.series(clean, fonts, svgSprite, gulp.parallel(html, images, styles, scripts), zip);
 
 export default dev;
